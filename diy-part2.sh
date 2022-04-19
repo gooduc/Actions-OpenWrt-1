@@ -27,5 +27,7 @@ CONFIG_NR_CPUS=128\nCONFIG_FAT_DEFAULT_IOCHARSET="utf8"' {}
 
 # 添加额外软件包 add passwall
 # add kengzo 源
-git clone https://github.com/kenzok8/openwrt-packages package/new/kengzo
-git clone https://github.com/kenzok8/small package/new/small
+# git clone https://github.com/kenzok8/openwrt-packages package/new/kengzo
+# git clone https://github.com/kenzok8/small package/new/small
+sed -i '$a src-git kenzo https://github.com/kenzok8/openwrt-packages' feeds.conf.default
+sed -i '$a src-git small https://github.com/kenzok8/small' feeds.conf.default
